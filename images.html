@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mixamo Rico Images</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+
+  }
+  .tabs {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .tab {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    border: 1px solid #ccc;
+  }
+  .tab.active {
+    background-color: #ccc;
+  }
+  .image-container {
+    display: none;
+    text-align: center;
+    margin-top: 10px;
+    background-color: #f0f0f0;
+  }
+  .image-container.active {
+    display: block;
+  }
+  .image-container img {
+    max-width: 300px;
+    height: auto;
+  }
+  .centered {
+    text-align: center;
+    background-color: #f0f0f0;
+  }
+</style>
+<script>
+  function showTab(tabId) {
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => tab.classList.remove('active'));
+
+    const containers = document.querySelectorAll('.image-container');
+    containers.forEach(container => container.classList.remove('active'));
+
+    const selectedTab = document.getElementById(tabId);
+    const selectedContainer = document.getElementById(`${tabId}-content`);
+
+    selectedTab.classList.add('active');
+    selectedContainer.classList.add('active');
+  }
+</script>
+</head>
+<body>
+  <div class="centered">
+    <h1>Mixamo Rico Images</h1>
+  </div>    
+
+  <div class="image-container active" id="tab1-content">
+    <div>
+        <h2>Evidence on XC0FN</h2>
+        <div>
+          <a href="xc0e1.jpg.png" target="_blank">
+            <img src="xc0e1.jpg.png " alt="Additional Image 1">
+            <a href="xc0e2.jpg.png" target="_blank">
+            <img src="xc0e2.jpg.png " alt="Additional Image 1">
+          </a>
+          <p>Click image to view larger - Where is the subscribe button?</p>
+        </div>
+        <div>
+          <a href="xcoe3.jpg.png" target="_blank">
+            <img src="xcoe3.jpg.png" alt="Additional Image 2">
+          </a>
+          <p>Click image to view larger - If he streamed consistantly why is he loosing more then hes gaining?</p>
+        </div>  
+      <h2>Evidence on AJ</h2>
+      <div>
+        <a href="evidence-1.jpg" target="_blank">
+          <img src="evidence-1.jpg" alt="Image 1">
+        </a>
+        <p>Click image to view larger</p>
+      </div>
+      <div>
+        <a href="evidence-2.jpg" target="_blank">
+          <img src="evidence-2.jpg" alt="Image 2">
+        </a>
+        <p>Click image to view larger</p>
+      </div>
+      <div>
+        <a href="evidence-3.jpg" target="_blank">
+          <img src="evidence-3.jpg" alt="Image 3">
+        </a>
+        <p>Click image to view larger</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
